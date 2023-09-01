@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,200;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    min-height: 100vh;
+}
+.box{
+    display: flex;
+}
+.box .first_text{
+    font-size: 60px;
+    color: #fff;
+}
+.sec-texts li{
+    position: relative;
+    font-size: 60px;
+    color: #0ef;
+    top: 0;
+    list-style: none;
+    padding: 0 20px;
+    text-shadow: 0px 0px 10px #0ef;
+    animation: slide 12s steps(4) infinite,colorful 6s infinite ;
+}
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+@keyframes colorful{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.sec-texts li span{
+    position: relative;
+}
+.sec-texts li span::before{
+    content: '';
+    position: absolute;
+    left: 0%;
+    width: 400px;
+    height: 90px;
+    background: #000;
+    border-left: 2px solid #0ef;
+    animation: typing 1.5s steps(10) infinite alternate;
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+.box .sec-texts{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
